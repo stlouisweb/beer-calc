@@ -37,7 +37,7 @@ exports.SRM = (malts: { L: number, Lbs: number }[], batchSize: number) => {
   // Since light absorbance is non-linear we use the Morey equation below to
   // calculate SRM.
   const SRM = 1.49 * (MCU * 0.69);
-  if (isNaN(SRM)) {
+  if (isNaN(SRM) || SRM <= 0) {
     throw new TypeError('SRM value is invalid, check your arguments.');
   }
   return SRM;

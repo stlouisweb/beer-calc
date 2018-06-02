@@ -13,9 +13,23 @@ describe('SRM Color', () => {
     const batchSize = 5; // gallons
     expect(beerCalc.SRM(grains, batchSize)).toBe(61.686);
   });
-  it('should return an error message if invalid arguments are provided', () => {
+  it('should throw an error if invalid arguments are provided', () => {
     const grains = 'dingus';
     const batchSize = 'five gallons'; // gallons
+    expect(() => beerCalc.SRM(grains, batchSize)).toThrow(
+      'SRM value is invalid, check your arguments.'
+    );
+  });
+  it('should throw an error if the result is 0', () => {
+    const grains = { L: 0, Lbs: 10 };
+    const batchSize = 5; // gallons
+    expect(() => beerCalc.SRM(grains, batchSize)).toThrow(
+      'SRM value is invalid, check your arguments.'
+    );
+  });
+  it('should throw an error if the result is less than 0', () => {
+    const grains = { L: -10, Lbs: 10 };
+    const batchSize = 5; // gallons
     expect(() => beerCalc.SRM(grains, batchSize)).toThrow(
       'SRM value is invalid, check your arguments.'
     );
