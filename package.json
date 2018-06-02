@@ -1,9 +1,9 @@
 {
   "name": "beer-calc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Calculations for brewing beer.",
   "license": "MIT",
-  "repository": "github:stlouisweb/brew-calc",
+  "repository": "github:stlouisweb/beer-calc",
   "author": {
     "name": "jeremyplack",
     "email": "stlouisweb@gmail.com"
@@ -83,6 +83,10 @@
       "sourceType": "module"
     },
     "rules": {
+      "quotes": [
+        "error",
+        "single"
+      ],
       "prettier/prettier": [
         "error",
         {

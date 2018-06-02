@@ -1,4 +1,4 @@
-# brew-calc
+# beer-calc
 
 > Calculations for brewing beer.
 
@@ -7,20 +7,20 @@
 ## Install
 
 ```
-$ yarn add brew-calc
+$ yarn add beer-calc
 ```
 
 ## Usage
 
 ```js
-const brewCalc = require('brew-calc');
+const beerCalc = require('beer-calc');
 
-brewCalc('unicorns');
+beerCalc('unicorns');
 ```
 
 ## API
 
-### brewCalc(input)
+### beerCalc(input)
 
 Calculations for brewing beer.
 
