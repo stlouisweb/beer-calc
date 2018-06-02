@@ -1,6 +1,6 @@
 {
-  "name": "brew-calc",
-  "version": "0.0.0",
+  "name": "beer-calc",
+  "version": "0.0.1",
   "description": "Calculations for brewing beer.",
   "license": "MIT",
   "repository": "github:stlouisweb/brew-calc",
@@ -11,6 +11,7 @@
   "files": [
     "lib"
   ],
+  "main": "lib/index.js",
   "engines": {
     "node": ">=6"
   },
