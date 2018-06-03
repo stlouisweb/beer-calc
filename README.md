@@ -23,7 +23,7 @@ Calculations for brewing beer.
 ### beerCalc.SRM([grains], batchSize)
 
 Returns the SRM Color estimate for a recipe given an array of grain objects and the batch size in gallons.
-The grain object has two parameters, L (degrees Lovibond) and Lbs (weight of grain in pounds).
+The grain object has two properties, L (degrees Lovibond) and Lbs (weight of grain in pounds).
 
 example:
 

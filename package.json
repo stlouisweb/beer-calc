@@ -1,6 +1,6 @@
 {
   "name": "beer-calc",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Calculations for brewing beer.",
   "license": "MIT",
   "repository": "github:stlouisweb/beer-calc",
@@ -90,7 +90,7 @@
       "prettier/prettier": [
         "error",
         {
-          "trailingComma": "es5",
+          "trailingComma": "none",
           "singleQuote": true
         }
       ],

@@ -42,3 +42,41 @@ exports.SRM = (malts: { L: number, Lbs: number }[], batchSize: number) => {
   }
   return SRM;
 };
+
+exports.IBU = (hops: { boilTime: number, AAU: number }[], OG: number) => {
+  const utilizationChart = {
+    '51030': 0.055,
+    '51040': 0.05,
+    '51050': 0.046,
+    '51060': 0.042,
+    '51070': 0.038,
+    '51080': 0.035,
+    '51090': 0.032,
+    '51100': 0.029,
+    '51110': 0.027,
+    '51120': 0.025,
+    '101030': 0.1,
+    '101040': 0.091,
+    '101050': 0.084,
+    '101060': 0.76,
+    '101070': 0.07,
+    '101080': 0.064,
+    '101090': 0.032,
+    '101100': 0.029,
+    '101110': 0.027
+  };
+  const utilization = hops.reduce(
+    (total: number, hop: { boilTime: number, AAU: number }) => {
+      const uKey = `${hop.boilTime}${OG * 1000}`;
+      // split the diff if OG is precise to thousandths range.
+      if (!isNaN(utilizationChart[uKey])) {
+        const lowerBound = Math.floor(OG / 0.01) * 0.01 * 1000;
+        const upperBound = Math.ceil(OG / 0.01) * 0.01 * 1000;
+      }
+      return total + utilizationChart[uKey];
+    },
+    0
+  );
+
+  return utilization;
+};
